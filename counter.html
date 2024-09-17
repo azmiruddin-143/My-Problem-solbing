@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Count <span id="count">0</span></h1>
+        <button id="plus"
+            style="background-color: rgb(15, 15, 134); color: white; border: none; padding: 8px 20px; border-radius: 5px; font-size:16px;">Increase
+            +</button>
+        <button id="maynas"
+            style="background-color: rgb(0, 96, 86); color: white; border: none; padding: 8px 20px; border-radius: 5px; font-size:16px;">Reduce
+            -</button>
+    </div>
+
+
+    <script>
+        let man = 0;
+        document.getElementById("plus").addEventListener("click", function () {
+            man++
+            let counter = document.getElementById("count");
+            counter.innerText = man;
+           
+        })
+
+
+        document.getElementById("maynas").addEventListener("click", function () {
+            if (man <= 0) {
+              man++
+            }
+            man--
+            let counter = document.getElementById("count");
+            counter.innerText = man;
+
+
+           
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
