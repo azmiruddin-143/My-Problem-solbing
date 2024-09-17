@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <h2>Todo List </h2>
+        <input id="input-text" type="text" placeholder="type todo list">
+        <button id="add-btn">Add</button> <br> <br>
+       
+    </div>
+
+    <script>
+        document.getElementById("add-btn").addEventListener("click", function () {
+            let inputvalue = document.getElementById("input-text");
+            inputvalue.value;
+            let header = document.getElementById("header");
+            let h1 = document.createElement("h1");
+            h1.innerText = inputvalue.value;
+            h1.style.marginTop ="30px"
+            header.appendChild(h1);
+
+            let btn = document.createElement("button");
+            btn.innerText = "Dilet";
+            btn.style.display = "block"
+            btn.style.background ="blue";
+            btn.style.border = "none";
+            btn.style.color = "white";
+            btn.style.padding = "8px 20px"
+            btn.style.marginTop ="10px"
+            btn.style.marginBottom ="10px"
+            header.appendChild(btn);
+
+            btn.addEventListener("click",function(){
+                h1.style.display = "none"
+                btn.style.display = "none"
+               
+               
+            })
+          
+             if(inputvalue.value === ""){
+                 btn.style.display = "none"
+                
+             } 
+        })
+
+        
+       
+
+    </script>
+
+</body>
+
+</html>

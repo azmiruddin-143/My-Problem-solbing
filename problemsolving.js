@@ -30,4 +30,75 @@ function nam(person) {
 
 }
 let namfinall = nam("Azmir Uddin 143");
-console.log(namfinall)
+console.log(namfinall);
+
+
+// node problemsolving.js//
+// secont input//
+
+function distric(jela) {
+
+    if (typeof jela !== "string") {
+        return "plz type a string name"
+    }
+
+    for (let i = 0; i < jela.length; i++) {
+        let test = jela[i];
+        if (test > "0" && test < "9") {
+            return "plz type a string name no number"
+        }
+    }
+
+    if (typeof jela === "string") {
+        return jela
+    }
+
+}
+
+let districfinall = distric(54154);
+console.log(districfinall);
+
+
+// node problemsolving.js//
+// therd input//
+
+function email(emailaddress) {
+
+    if (typeof emailaddress !== "string" || !emailaddress.includes("@")) {
+        console.log("Apnar Email thik nai");
+    }
+    else {
+        console.log(emailaddress);
+    }
+}
+
+let emailfinall = email("freelancerazmir143@gmail.com");
+
+// node problemsolving.js//
+// four input//
+
+function numberinput(numbervalue) {
+
+    if (numbervalue.toString().length <= 10 || numbervalue.toString().length >= 12) {
+        console.log("Number thik nai 11tar kom ba besi ace");
+    }
+    else {
+        console.log(numbervalue);
+    }
+
+}
+
+let man = numberinput(123);
+console.log(man);
+
+
+// node problemsolving.js//
+// four input//
+
+
+  function submitbutton() {
+      console.log("Submit Suxesfull");
+  }
+
+  let submitfinal = submitbutton();
+  console.log(submitfinal);
