@@ -7,10 +7,13 @@
     <title>Counter</title>
 </head>
 
-<body>
+<body id="body">
 
-    <div>
-        <h1>Count <span id="count">0</span></h1>
+     <button id="stop" style="background-color: rgb(184, 4, 4); color: white; border: none; padding: 50px 20px; border-radius: 100px; font-size:16px;" >Stop Count</button>
+     <button id="on" style="background-color: rgb(7, 181, 33); color: rgb(255, 255, 255); border: none; padding: 50px 25px; border-radius: 100px; font-size:16px;">On Count</button>
+
+    <div id="main" style="padding: 30px 10px;">
+        <h1 id="count-text">Count <span id="count">0</span></h1>
         <button id="plus"
             style="background-color: rgb(15, 15, 134); color: white; border: none; padding: 8px 20px; border-radius: 5px; font-size:16px;">Increase
             +</button>
@@ -19,30 +22,36 @@
             -</button>
     </div>
 
-
     <script>
+
+            document.getElementById("stop").addEventListener("click", function(){
+                 let plus = document.getElementById("plus");
+                 plus.setAttribute("disabled",true)
+            })
+            
+            document.getElementById("on").addEventListener("click", function(){
+                 let plus = document.getElementById("plus");
+                 plus.removeAttribute("disabled")
+            })
+            
+            //  .................................//
         let man = 0;
         document.getElementById("plus").addEventListener("click", function () {
             man++
             let counter = document.getElementById("count");
             counter.innerText = man;
-           
-        })
 
+        })
 
         document.getElementById("maynas").addEventListener("click", function () {
             if (man <= 0) {
-              man++
+                man++
             }
             man--
             let counter = document.getElementById("count");
             counter.innerText = man;
 
-
-           
-
         })
-
 
 
     </script>

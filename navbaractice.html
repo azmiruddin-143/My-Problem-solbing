@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Active</title>
+
+    <style>
+        #main ul li {
+            list-style: none;
+            /* background-color: red; */
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        #main ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <!-- <ul>
+            <li id="f-li">Home</li>
+            <li id="s-li">About</li>
+            <li id="t-li">Service</li>
+            <li id="four-li">Blog</li>
+            <li id="five-li">Contact</li>
+        </ul> -->
+
+        <ul id="container">
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+
+    </div>
+
+
+    <script>
+        // let container = document.getElementById("container");
+        let listitem = document.getElementsByTagName("li");
+        let lastClicked = null;
+
+        for (let singleitem of listitem) {
+            singleitem.addEventListener("click", function () {
+
+                if (lastClicked == null) {
+                    singleitem.style.background = "red";
+                    singleitem.style.color = "white";
+                    lastClicked = singleitem;
+                }
+                else{
+                    lastClicked.style.background = "white";
+                    lastClicked.style.color = "black";
+
+                    singleitem.style.background = "red";
+                    singleitem.style.color = "white";
+                    lastClicked = singleitem;
+                }
+            })
+
+        }
+
+    </script>
+
+
+
+
+
+
+    <!-- <script>
+
+        document.getElementById("f-li").addEventListener("click", function () {
+            let first = document.getElementById("f-li");
+            first.style.background = "red"
+            let secont = document.getElementById("s-li");
+            secont.style.background = "none"
+            let therd = document.getElementById("t-li");
+            therd.style.background = "none"
+            let four = document.getElementById("four-li");
+            four.style.background = "none"
+            let five = document.getElementById("five-li");
+            five.style.background = "none"
+        })
+
+        document.getElementById("s-li").addEventListener("click", function () {
+            let secont = document.getElementById("s-li");
+            secont.style.background = "red"
+            let first = document.getElementById("f-li");
+            first.style.background = "none"
+            let therd = document.getElementById("t-li");
+            therd.style.background = "none"
+            let four = document.getElementById("four-li");
+            four.style.background = "none"
+            let five = document.getElementById("five-li");
+            five.style.background = "none"
+
+        })
+
+        document.getElementById("t-li").addEventListener("click", function () {
+            let therd = document.getElementById("t-li");
+            therd.style.background = "red"
+            let first = document.getElementById("f-li");
+            first.style.background = "none"
+            let secont = document.getElementById("s-li");
+            secont.style.background = "none"
+            let four = document.getElementById("four-li");
+            four.style.background = "none"
+            let five = document.getElementById("five-li");
+            five.style.background = "none"
+
+        })
+
+
+        // //////////////////////////////////////////////////
+
+
+        document.getElementById("four-li").addEventListener("click", function () {
+            let four = document.getElementById("four-li");
+            four.style.background = "red"
+            let first = document.getElementById("f-li");
+            first.style.background = "none"
+            let secont = document.getElementById("s-li");
+            secont.style.background = "none"
+            let therd = document.getElementById("t-li");
+            therd.style.background = "none"
+            let five = document.getElementById("five-li");
+            five.style.background = "none"
+        })
+
+
+        document.getElementById("five-li").addEventListener("click", function () {
+            let five = document.getElementById("five-li");
+            five.style.background = "red"
+            let first = document.getElementById("f-li");
+            first.style.background = "none"
+            let secont = document.getElementById("s-li");
+            secont.style.background = "none"
+            let therd = document.getElementById("t-li");
+            therd.style.background = "none"
+            let four = document.getElementById("four-li");
+            four.style.background = "none"
+        })
+
+
+
+    </script> -->
+</body>
+
+</html>
